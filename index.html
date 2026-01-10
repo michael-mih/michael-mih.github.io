@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
+    <title>Michael Mihaley</title>
     <style>
         * {
             margin: 0;
@@ -20,10 +20,10 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto 0 0;
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: left;
-        }
+}
 
         .profile-section {
             margin-bottom: 60px;
@@ -35,8 +35,8 @@
         }
 
         .profile-photo {
-            width: 120px;
-            height: 120px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             flex-shrink: 0;
@@ -70,9 +70,7 @@
 
         .links a {
             color: #333;
-            text-decoration: none;
             margin-right: 20px;
-            font-size: 0.9em;
         }
 
         .links a:hover {
@@ -80,7 +78,7 @@
         }
 
         .section-title {
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -89,10 +87,19 @@
             margin-bottom: 50px;
             padding-bottom: 30px;
             border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
         }
 
-        .project-item:last-child {
+        .project-content {
+            flex: 1;
+        }
+
+        .project-item:last-of-type {
             border-bottom: none;
+            padding-bottom: 0px;
+
         }
 
         .project-title {
@@ -107,20 +114,38 @@
             font-size: 0.95em;
         }
 
+        ul.project-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+            padding-left: 20px;
+            list-style-position: outside;
+        }
+
+        ul.project-description li {
+            margin-bottom: 8px;
+        }
+
         .project-tags {
             margin-bottom: 15px;
             font-size: 0.85em;
             color: #999;
+            font-style: italic;
+        }
+
+        .project-tags a {
+            color: #999;
         }
 
         .video-container {
-            width: 100%;
-            margin-top: 15px;
+            width: 300px;
+            flex-shrink: 0;
         }
 
-        .video-container video {
+        .video-container img {
             width: 100%;
             border: 1px solid #eee;
+            border-radius: 4px;
         }
 
         footer {
@@ -140,6 +165,14 @@
                 flex-direction: column;
             }
 
+            .project-item {
+                flex-direction: column;
+            }
+
+            .video-container {
+                width: 100%;
+            }
+
             .links a {
                 margin-right: 20px;
             }
@@ -149,64 +182,166 @@
 <body>
     <div class="container">
         <div class="profile-section">
-            <img src="https://via.placeholder.com/120" alt="Your Name" class="profile-photo">
+            <img src="media/me.webp" alt="Michael Mihaley" class="profile-photo">
             <div class="profile-info">
-                <h1>Your Name</h1>
-                <p class="tagline">Developer | Designer</p>
+                <h1>Michael Mihaley</h1>
+                <p class="tagline">Robotics | AI Safety</p>
                 <p class="bio">
-                    Brief introduction about yourself and what you do.
+                    I'm a college junior (grad. may 2027) studying at Columbia University, majoring in computer science (B.Sc.) and minoring in political science. I enjoy working in the intersection of robotics and AI, and developing ways to make AI more safe. In my free time I like to read and write!
                 </p>
                 <div class="links">
-                    <a href="https://github.com/yourusername">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
-                    <a href="mailto:your.email@example.com">Email</a>
+                    <p>mjm2442 [at] columbia [dot] edu / <a href="https://github.com/michael-mih">GitHub</a></p>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">Work</h2>
+        <h2 class="section-title">Works in Progress</h2>
 
         <div class="project-item">
-            <h3 class="project-title">Project Name 1</h3>
-            <p class="project-tags">React • Node.js • MongoDB</p>
-            <p class="project-description">
-                Brief description of what this project does and why it matters.
-            </p>
+            <div class="project-content">
+                <h3 class="project-title">Static Page Encryption to Combat Rogue Web Scraping and Tokenization</h3>
+                <p class="project-tags">Working paper, Mentors: <a href="http://emiliobarkett.github.io/">Emilio Barkett</a></p>
+                <p class="project-description">
+                <ul class="project-description">
+                    <li>
+                        Developing a system that uses AES encryption to secure pages from web crawlers regardless of self identification
+                    </li>
+                </ul>
+            </div>
             <div class="video-container">
-                <video controls>
-                    <source src="your-video-1.mp4" type="video/mp4">
-                </video>
+                <img src="your-gif-1.gif" alt="Static Page Encryption Demo">
+            </div>
+        </div>
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="project-item">
+           <div class = "project-content">
+            <h3 class="project-title">Robotics and Machine Learning Researcher</h3>
+            <p class="project-tags">Columbia University, Advisors: <a href="https://yunzhuli.github.io/">Yunzhu Li</a> and <a href="http://www.yixuanwang.me/">Yixuan Wang</a></p>
+            <ul class="project-description">
+                <li>
+                    Programmed robotic manipulation for the <i>Dexmate Vega</i> and <i>xArm7</i> in Python, writing control functions to move
+                    to joint positions and solve inverse kinematics for end effector positions
+                </li>
+                <li>
+                    3D modeled and assembled leader arm and forked the <i>GELLO Low-Cost Teleoperation Framework</i> research
+                    codebase to perform imitation learning with the <i>Dexmate Vega</i> and for teleoperation in <i>SAPIEN</i>
+                </li>
+                <li>
+                    Designed and printed custom mounting connection to expand end effector options for the <i>Dexmate Vega</i>
+                </li>
+            </ul>
+            </div>
+            <div class="video-container">
+                <img src="your-gif-0.gif" alt="Robotics and Machine Learning Researcher Demo">
             </div>
         </div>
 
         <div class="project-item">
-            <h3 class="project-title">Project Name 2</h3>
-            <p class="project-tags">Python • TensorFlow • Machine Learning</p>
-            <p class="project-description">
-                Brief description of what this project does and why it matters.
-            </p>
+            <div class="project-content">
+                <h3 class="project-title">Robotics Instructor</h3>
+                <p class="project-tags">Rudolf Steiner School, October 2025 - Present</p>
+                <ul class="project-description">
+                    <li>
+                        Coaching a <i>First Tech Challenge</i> robotics team in all relevant <i>FIRST Robotics</i> disciplines including Java programming, building, and electronics
+                    </li>
+                    <li>
+                        Introducing students to advanced programming concepts such as finite state machines and multi-threading to push the boundaries of code execution time
+                    </li>
+                    <li>
+                        Increased program interest and size from 2-3 students to around 15
+                    </li>
+                </ul>
+            </div>
             <div class="video-container">
-                <video controls>
-                    <source src="your-video-2.mp4" type="video/mp4">
-                </video>
+                <img src="your-gif-3.gif" alt="Robotics Instruction Demo">
             </div>
         </div>
 
         <div class="project-item">
-            <h3 class="project-title">Project Name 3</h3>
-            <p class="project-tags">JavaScript • CSS • API</p>
-            <p class="project-description">
-                Brief description of what this project does and why it matters.
-            </p>
+            <div class="project-content">
+                <h3 class="project-title">Machine Learning Intern</h3>
+                <p class="project-tags">Outlier AI, January 2024 - June 2024</p>
+                <ul class="project-description">
+                    <li>
+                        Refined large language models through reference-free evaluation, both via code-based tests and manual review
+                    </li>
+                    <li>
+                        Evaluated and corrected responses in Python, Java, and C++, leading to a response accuracy increase of over 30%
+                    </li>
+                </ul>
+            </div>
             <div class="video-container">
-                <video controls>
-                    <source src="your-video-3.mp4" type="video/mp4">
-                </video>
+                <img src="your-gif-4.gif" alt="Machine Learning Demo">
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-content">
+                <h3 class="project-title">STEM Instructor</h3>
+                <p class="project-tags">The Stony Brook School Summer Program, May 2021 - September 2021</p>
+                <ul class="project-description">
+                    <li>
+                        Instructed students on computer programming, 3D modeling, and various other STEM disciplines
+                    </li>
+                    <li>
+                        Collaborated with other counselors to construct a lesson plan reaching all student levels
+                    </li>
+                </ul>
+            </div>
+            <div class="video-container">
+                <img src="your-gif-5.gif" alt="STEM Instruction Demo">
+            </div>
+        </div>
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-item">
+            <div class="project-content">
+
+            <h3 class="project-title">HybVIO Visual-Inertial Odometry System with SLAM</h3>
+            <p class="project-tags">C++ • C</p>
+            <ul class="project-description">
+                <li>
+                    Forked a research-oriented odometry codebase that uses preprocessed data and modified it to interface with actual Intel RealSense Cameras for real-time spatial mapping under constrained compute
+                </li>
+                <li>
+                    Collaborated with a team to identify slowdowns in stereo imaging code and speed up visualization by 60%
+                </li>
+            </ul>
+            </div>
+            <div class="video-container">
+                <div class="video-container">
+                <img src="your-gif-0.gif" alt="HybVIO real time Demo">
+            </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-content">
+            <h3 class="project-title">CUDA SHA-3 Hash Checker</h3>
+            <p class="project-tags">CUDA • C++ • C</p>
+            
+            <ul class="project-description">
+                <li>
+                    Developed an NVIDIA CUDA parallelized SHA-3 hasher and checker, allowing the SHA-3 hashing and comparison of over 14,000,000 keywords in under 10 seconds
+                </li>
+                <li>
+                    Wrote a memory-mapped file processor to reduce wordlist reading time from 15 seconds to 0.5 seconds when working with millions of lines of input data
+                </li>
+                <li>
+                    Modified C implementation of the SHA-3 encryption algorithm to work as device code on GPUs
+                </li>
+            </ul>
+            </div>
+            <div class="video-container">
+                <img src="your-gif-0.gif" alt="Cuda SHA-3 Hash Checker Demo">
             </div>
         </div>
 
         <footer>
-            © 2025 Your Name
+            © 2026 Michael Mihaley
         </footer>
     </div>
 </body>
