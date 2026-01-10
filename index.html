@@ -140,12 +140,27 @@
         .video-container {
             width: 300px;
             flex-shrink: 0;
+            text-align: center;
         }
 
         .video-container img {
             width: 100%;
             border: 1px solid #eee;
             border-radius: 4px;
+            display: block;
+        }
+
+        .video-container a{
+        
+            text-decoration: none;
+        }
+
+
+        .figure-note {
+            margin-top: 8px;
+            font-size: 0.8em;
+            color: #777;
+            line-height: 1.4;
         }
 
         footer {
@@ -190,7 +205,7 @@
                     I'm a college junior (grad. may 2027) studying at Columbia University, majoring in computer science (B.Sc.) and minoring in political science. I enjoy working in the intersection of robotics and AI, and developing ways to make AI more safe. In my free time I like to read and write!
                 </p>
                 <div class="links">
-                    <p>mjm2442 [at] columbia [dot] edu / <a href="https://github.com/michael-mih">GitHub</a></p>
+                    <p>mjm2442 [at] columbia [dot] edu / <a href="https://github.com/michael-mih"  target="_blank" rel="noopener noreferrer">GitHub</a></p>
                 </div>
             </div>
         </div>
@@ -200,7 +215,7 @@
         <div class="project-item">
             <div class="project-content">
                 <h3 class="project-title">Static Page Encryption to Combat Rogue Web Scraping and Tokenization</h3>
-                <p class="project-tags">Working paper, Mentors: <a href="http://emiliobarkett.github.io/">Emilio Barkett</a></p>
+                <p class="project-tags">Working paper, Mentors: <a href="http://emiliobarkett.github.io/"  target="_blank" rel="noopener noreferrer">Emilio Barkett</a></p>
                 <p class="project-description">
                 <ul class="project-description">
                     <li>
@@ -209,7 +224,13 @@
                 </ul>
             </div>
             <div class="video-container">
-                <img src="your-gif-1.gif" alt="Static Page Encryption Demo">
+            <a href="media/aes_web_project_demo.gif" target="_blank" rel="noopener noreferrer">
+                <img src="media/aes_web_project_demo.gif" alt="Static Page Encryption Demo">
+            <div class="figure-note">
+                [click to expand]: Side by side comparison of the normal user experience and the rendering of the html scraped by a web crawler. Shown code snippet demonstrates the html visible to web crawlers as well as the embedded ciphertext.
+            </div>
+            </a>
+            
             </div>
         </div>
 
@@ -218,7 +239,7 @@
         <div class="project-item">
            <div class = "project-content">
             <h3 class="project-title">Robotics and Machine Learning Researcher</h3>
-            <p class="project-tags">Columbia University, Advisors: <a href="https://yunzhuli.github.io/">Yunzhu Li</a> and <a href="http://www.yixuanwang.me/">Yixuan Wang</a></p>
+            <p class="project-tags">Columbia University, Advisors: <a href="https://yunzhuli.github.io/"  target="_blank" rel="noopener noreferrer">Yunzhu Li</a> and <a href="http://www.yixuanwang.me/"  target="_blank" rel="noopener noreferrer">Yixuan Wang</a></p>
             <ul class="project-description">
                 <li>
                     Programmed robotic manipulation for the <i>Dexmate Vega</i> and <i>xArm7</i> in Python, writing control functions to move
@@ -233,9 +254,15 @@
                 </li>
             </ul>
             </div>
-            <div class="video-container">
-                <img src="your-gif-0.gif" alt="Robotics and Machine Learning Researcher Demo">
-            </div>
+           <div class="video-container">
+    <a href="media/robotics_ml_demo.gif" target="_blank" rel="noopener noreferrer">
+        <img src="media/robotics_ml_demo.gif" alt="Robotics and Machine Learning Researcher Demo">
+    <div class="figure-note">
+        [click to expand]: <i>Dexmate Vega</i> being teleoperated by the controller I modeled and assembled for imitation learning.
+    </div>
+    </a>
+    
+</div>
         </div>
 
         <div class="project-item">
@@ -254,9 +281,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="video-container">
-                <img src="your-gif-3.gif" alt="Robotics Instruction Demo">
-            </div>
+
         </div>
 
         <div class="project-item">
@@ -272,9 +297,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="video-container">
-                <img src="your-gif-4.gif" alt="Machine Learning Demo">
-            </div>
+
         </div>
 
         <div class="project-item">
@@ -290,9 +313,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="video-container">
-                <img src="your-gif-5.gif" alt="STEM Instruction Demo">
-            </div>
+
         </div>
 
         <h2 class="section-title">Projects</h2>
@@ -311,11 +332,15 @@
                 </li>
             </ul>
             </div>
-            <div class="video-container">
-                <div class="video-container">
-                <img src="your-gif-0.gif" alt="HybVIO real time Demo">
-            </div>
-            </div>
+           <div class="video-container">
+    <a href="media/hybvio_intel_demo.gif" target="_blank" rel="noopener noreferrer">
+        <img src="media/hybvio_intel_demo.gif" alt="HybVIO real time Demo">
+    <div class="figure-note">
+       [click to expand]: Hybvio visual-inertial odometry and SLAM, code snippet shows an example of exchanging prerecprded video input for live <i>Intel RealSense</i> cameras.
+    </div>
+    </a>
+    
+</div>
         </div>
 
         <div class="project-item">
@@ -335,9 +360,7 @@
                 </li>
             </ul>
             </div>
-            <div class="video-container">
-                <img src="your-gif-0.gif" alt="Cuda SHA-3 Hash Checker Demo">
-            </div>
+
         </div>
 
         <footer>
