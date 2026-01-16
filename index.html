@@ -219,10 +219,10 @@
                 <p class="project-description">
                 <ul class="project-description">
                     <li>
-                        Developed an AES-based system that obfuscates webpages from data crawlers regardless of self identification such as a request's user agent metadata, or adherence to robots.txt.
+                        Developed an AES-based system that obfuscates webpages from data crawlers regardless of self identification such as a request's user agent metadata, or an adherence to robots.txt.
                     </li>
                     <li>
-                        Evaluating the performance of this system through training models via PyTorch on both standard and AES-encrypted web pages to determine its reliability and impact on model accuracy.
+                       To quantify defensive effectiveness, trained a neural regression model implemented in PyTorch to estimate encryption coverage—the fraction of content remaining encrypted—based on observed crawler interaction features. The model operates purely as a measurement tool and is trained offline using controlled crawl traces with known ground-truth exposure.
                     </li>
                 </ul>
             </div>
