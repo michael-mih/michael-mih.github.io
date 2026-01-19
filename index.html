@@ -219,10 +219,13 @@
                 <p class="project-description">
                 <ul class="project-description">
                     <li>
-                        Developed an AES-based system that obfuscates webpages from data crawlers regardless of self identification such as a request's user agent metadata, or an adherence to robots.txt.
+                        Designed an AES-encrypted content delivery pipeline that prevents unauthorized scraping (e.g. obfuscated user agent, ignoring <i>robots.txt</i>) by 100% of non-JS crawlers in controlled tests across 4 simulated scraper variants
                     </li>
                     <li>
-                       Trained a neural regression model implemented in PyTorch to estimate encryption coverage—the fraction of content remaining encrypted—based on observed crawler interaction features. The model operates purely as a measurement tool and is trained offline using controlled crawl traces with known ground-truth exposure.
+                        Designed and evaluated a PyTorch regression model using crawler interaction features to estimate encryption coverage under adversarial scraping, trained on 10k+ traces achieving R² = 0.71 on held-out traffic
+                    </li>
+                    <li>
+                        Evaluated system overhead, adding &lt;40 ms median page load latency while blocking unauthorized content access
                     </li>
                 </ul>
             </div>
@@ -294,7 +297,7 @@
                         Refined large language models via reference-free evaluation in Python for a response accuracy increase of over 40%
                     </li>
                     <li>
-                        Built automated safety checks combining classifiers and rule tests to flag 15% of pre-deployed output as misaligned
+                        Built automated safety checks combining classifiers and rule tests to flag 10% of pre-deployed output as misaligned
                     </li>
                 </ul>
             </div>
